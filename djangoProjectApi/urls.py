@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from myAPI.views import MessageView
+from myAPI.views import MessageView, MessageChange
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('messages/', MessageView.as_view())
+    path('messages/', MessageView.as_view()),
+    path('messages/<int:pk>', MessageChange.as_view())
 ]
