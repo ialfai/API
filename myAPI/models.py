@@ -4,7 +4,7 @@ from django.db.models import CASCADE
 
 class Message(models.Model):
     title = models.CharField(max_length=255)
-    content = models.TextField()
+    content = models.CharField(max_length=166)
     counter = models.IntegerField(default=0)
 
     def __str__(self):

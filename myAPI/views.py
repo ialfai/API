@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from myAPI.serializers import MessageSerializer
+from myAPI.serializers import MessageSerializer, MessageSerializerLess
 from rest_framework import generics
 from myAPI.models import Message
 from rest_framework import viewsets
@@ -11,7 +11,7 @@ from rest_framework.response import Response
 class MessageView(generics.ListCreateAPIView):
     '''This view is allowing an authorized user to create a message '''
     queryset = Message.objects.all()
-    serializer_class = MessageSerializer
+    serializer_class = MessageSerializerLess
 
 
 
