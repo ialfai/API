@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from myAPI.views import MessageView, MessageChange
+from myAPI.views import MessageView, MessageChange,MessageViewSet
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('messages/', MessageView.as_view()),
-    path('messages/<int:pk>', MessageChange.as_view())
+    path('messages/<int:pk>', MessageChange.as_view()),
+    path('messages-view', MessageViewSet.as_view({'get': 'list'}))
 ]
