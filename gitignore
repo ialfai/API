@@ -25,8 +25,8 @@ media
 *.iws /out/
 
 # Python #
-*.py[cod]
-*$py.class
+#*.py[cod]
+#*$py.class
 
 # Distribution / packaging
 .Python build/
@@ -113,4 +113,4 @@ GitHub.sublime-settings
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-.history
+
